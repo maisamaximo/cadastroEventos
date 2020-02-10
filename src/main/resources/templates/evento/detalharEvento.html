@@ -38,7 +38,7 @@
 		</div>
 
 		<form method="post">
-		<h4>Cadastrar Convidado</h4>
+			<h4>Adicionar novo convidado</h4>
 			<div class="row">
 				<div class="input-field col s6">
 					Nome: <input type="text" value="" name="nomeConvidado" />
@@ -52,6 +52,24 @@
 			</div>
 		</form>
 	</div>
+
+	<h5>Lista de convidados</h5>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>RG</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="convidado : ${convidados}">
+				<td><span th:text="${convidado.nomeConvidado}"></span></td>
+				<td><span th:text="${convidado.rg}"></span></td>
+			</tr>
+		</tbody>
+	</table>
 
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
