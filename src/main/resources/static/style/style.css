@@ -1,0 +1,14 @@
+.detalhesEvento {
+	padding: 10px;
+	border: 1px #CCC solid;
+	margin-bottom: 60px;
+}
+
+.detalhesEvento label {
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.tableFormulario {
+	width: 50%;
+}

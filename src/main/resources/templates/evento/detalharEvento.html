@@ -13,65 +13,81 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <title>Eventech - Detalhar Evento</title>
+<link rel="stylesheet" href="style/style.css" />
 </head>
-<body class="container">
-	<h1>Detalhes do evento</h1>
-	<h3>
-		<a href="/eventos" class="waves-effect waves-light btn"><i
-			class="material-icons left">dehaze</i>Listar Eventos</a>
-	</h3>
-
-	<div th:each="evento : ${evento}">
-		<div class="row">
-			<p>
-				Nome: <span th:text="${evento.nome}"></span>
-			</p>
-			<p>
-				Local: <span th:text="${evento.local}"></span>
-			</p>
-			<p>
-				Data: <span th:text="${evento.data}"></span>
-			</p>
-			<p>
-				Horario: <span th:text="${evento.horario}"></span>
-			</p>
-		</div>
-		
-		<th:block th:include="mensagemValidacao"></th:block>
-
-		<form method="post">
-			<h4>Adicionar novo convidado</h4>
-			<div class="row">
-				<div class="input-field col s6">
-					Nome: <input type="text" value="" name="nomeConvidado" />
-				</div>
-				<div class="input-field col s6">
-					RG: <input type="text" value="" name="rg" />
-				</div>
-				<button type="submit" class="waves-effect waves-light btn">
-					<i class="material-icons left">save</i>Adicionar
-				</button>
+<body>
+	<header>
+		<nav>
+			<div class="nav-wrapper container">
+				<a href="#" class="brand-logo">Logo</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="/eventos" class="waves-effect waves-light btn"><i
+							class="material-icons left">dehaze</i>Listar Eventos</a></li>
+				</ul>
 			</div>
-		</form>
-	</div>
+		</nav>
+	</header>
+	<section class="container">
+		<h1>
+			<span th:text="${evento.nome}"></span>
+		</h1>
 
-	<h5>Lista de convidados</h5>
+		<div th:each="evento : ${evento}">
+			<div class="row detalhesEvento">
+				<div class="input-field col s4">
+					<p>
+						<label>Local:</label> <span th:text="${evento.local}"></span>
+					</p>
+				</div>
+				<div class="input-field col s4">
+					<p>
+						<label>Data:</label> <span th:text="${evento.data}"></span>
+					</p>
+				</div>
+				<div class="input-field col s4">
+					<p>
+						<label>Horario:</label> <span th:text="${evento.horario}"></span>
+					</p>
+				</div>
+			</div>
 
-	<table>
-		<thead>
-			<tr>
-				<th>Nome</th>
-				<th>RG</th>
+			<th:block th:include="mensagemValidacao"></th:block>
 
-			</tr>
-		</thead>
-		<tbody>
-			<tr th:each="convidado : ${convidados}">
-				<td><span th:text="${convidado.nomeConvidado}"></span></td>
-				<td><span th:text="${convidado.rg}"></span></td>
-			</tr>
-		</tbody>
-	</table>
+			<form method="post">
+				<h4>Adicionar novo convidado</h4>
+				<div class="row">
+					<div class="input-field col s6">
+						Nome: <input type="text" value="" name="nomeConvidado" />
+					</div>
+					<div class="input-field col s6">
+						RG: <input type="text" value="" name="rg" />
+					</div>
+					<button type="submit" class="waves-effect waves-light btn">
+						<i class="material-icons left">save</i>Adicionar
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<h5 style="text-align: center">Lista de convidados</h5>
+
+		<table class="tableFormulario container">
+
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>RG</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="convidado : ${convidados}">
+					<td><span th:text="${convidado.nomeConvidado}"></span></td>
+					<td><span th:text="${convidado.rg}"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
 
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
