@@ -21,7 +21,7 @@
 			<div class="nav-wrapper container  white">
 				<img src="/images/gdg.png" style="height: 63px"/>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="/eventos" class="waves-effect waves-light btn"><i
+					<li><a href="/eventos" class="waves-effect waves-light btn green darken-3"><i
 							class="material-icons left">dehaze</i>Listar Eventos</a></li>
 				</ul>
 			</div>
@@ -53,7 +53,7 @@
 
 			<th:block th:include="mensagemValidacao"></th:block>
 
-			<form method="post">
+			<form method="post" class="blocoForm">
 				<h4>Adicionar novo convidado</h4>
 				<div class="row">
 					<div class="input-field col s6">
@@ -62,8 +62,8 @@
 					<div class="input-field col s6">
 						RG: <input type="text" value="" name="rg" />
 					</div>
-					<button type="submit" class="waves-effect waves-light btn">
-						<i class="material-icons left">save</i>Adicionar
+					<button type="submit" class="waves-effect waves-light btn blue darken-2 btnSalvar">
+						<i class="material-icons left" style="margin-right: 0px;">save</i>
 					</button>
 				</div>
 			</form>

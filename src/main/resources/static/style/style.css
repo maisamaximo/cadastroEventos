@@ -13,3 +13,15 @@
 	width: 50%;
 	margin-bottom: 60px;
 }
+
+.btnSalvar {
+	float:right;
+}
+
+.blocoForm {
+	background: #FFFFFF;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 10px #00000029;
+    border-radius: 15px;
+}

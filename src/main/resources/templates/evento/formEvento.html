@@ -13,23 +13,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <title>Eventech</title>
-<link rel="stylesheet" href="style/style.css"/>
+<link rel="stylesheet" href="style/style.css" />
 
 </head>
 <body class="grey lighten-4">
 	<header>
 		<nav class="white">
 			<div class="nav-wrapper container  white">
-				<img src="/images/gdg.png" style="height: 63px"/>
+				<img src="/images/gdg.png" style="height: 63px" />
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="/eventos" class="waves-effect waves-light btn"><i
+					<li><a href="/eventos"
+						class="waves-effect waves-light btn green darken-3"><i
 							class="material-icons left">dehaze</i>Listar Eventos</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
 
-	<section class="container">
+	<section class="container blocoForm">
 		<h1 style="font-size: 24px">Cadastre um novo evento!</h1>
 		<th:block th:include="mensagemValidacao"></th:block>
 
@@ -45,12 +46,12 @@
 				<div class="input-field col s3">
 					Horário: <input type="time" value="" name="horario" />
 				</div>
+				<button type="submit"
+					class="waves-effect waves-light btn blue darken-2 btnSalvar">
+					<i class="material-icons left"
+						style="margin-right: 0px;">save</i>
+				</button>
 			</div>
-
-
-			<button type="submit" class="waves-effect waves-light btn">
-				<i class="material-icons left">save</i>Salvar
-			</button>
 		</form>
 	</section>
 
