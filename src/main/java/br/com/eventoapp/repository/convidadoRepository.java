@@ -9,4 +9,6 @@ import br.com.eventoapp.models.Evento;
 
 public interface convidadoRepository extends CrudRepository<Convidado, String>{
 	List<Convidado> findByEvento(Evento evento);
+	
+	Convidado findByRg(String rg);
 }
